@@ -1,0 +1,96 @@
+html {
+    background: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sun {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.c {
+    border: 1px solid white;
+    border-radius: 100%;
+    transform: rotate(360deg);
+    position: absolute;
+    animation: rotate 2s infinite linear;
+    
+}
+
+.planet {
+    position: absolute;
+    border-radius: 100%;
+}
+
+.c_mercury {
+    animation-duration: 12s;
+    width: 200px;
+    height: 200px;
+}
+
+.mercury {
+    background: linear-gradient(100deg);
+    background-color: gray;
+    width: 25px;
+    height: 25px;
+    top: 40px;
+}
+
+.c_venus {
+    animation-duration: 16s;
+    width: 350px;
+    height: 350px;
+}
+
+.venus {
+    background: linear-gradient(100deg);
+    background-color: tan;
+    width: 35px;
+    height: 35px;
+    top: 80px;
+}
+
+.c_earth {
+    animation-duration: 20s;
+    width: 500px;
+    height: 500px;
+}
+
+.earth {
+    background: linear-gradient(100deg);
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    top: 130px;
+}
+
+.c_moon {
+    animation-duration: 5s;
+    width: 75px;
+    height: 75px;
+}
+
+.moon {
+    background: grey;
+    animation: moon-lighting-update 2s infinite linear;
+    width: 10px;
+    height: 10px;
+    top: 13px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg)
+    }
+}
