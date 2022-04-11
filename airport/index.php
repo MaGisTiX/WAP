@@ -20,7 +20,7 @@ $q= "SELECT * FROM airport";
 $result = mysqli_query($con, $q);
 echo '<table>' . PHP_EOL;
 whil (($airport = mysqli_fetch_array($result, MYSQLI_ASSOC))!== null) {
-    echo '<th>code</th><td><>' . $airport ['code'] . '</td></b>' '<td>'. $airport ['name'] . '</td>' . PHP_EOL;
+    echo '<th></th><td><>' . $airport ['code'] . '</td></b>' . '<td>'. $airport ['name'] . '</td>' . PHP_EOL;
 }
 echo '</table>' . PHP_EOL;
 ?>
