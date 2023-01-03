@@ -1,0 +1,14 @@
+<?php
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'bmi/v1', '/bmi', array(
+    'methods' => 'POST',
+    'callback' => 'bmi_api',
+  ) );
+} );
+function bmi_api($data) {
+  $height = $data['height'];
+  $weight = $data['weight'];
+  $bmi = $weight / ($height * $height);
+  return $bmi;
+}
+?>
